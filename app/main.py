@@ -14,6 +14,16 @@ def main():
         departure_date
     )
 
+    print("\n===== VOOS ENCONTRADOS =====")
+
+    for flight in flights:
+        print(f"\nCompanhia: {flight.airline}")
+        print(f"Preço: R$ {flight.price}")
+
+    if len(flights) == 0:
+        print("❌ Nenhum voo encontrado.")
+        return
+
     cheapest_flight = find_cheapest_flight(flights)
 
     print("===== MELHOR VOO =====")
