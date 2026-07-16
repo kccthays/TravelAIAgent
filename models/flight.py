@@ -25,13 +25,15 @@ class Flight:
         self.duration = duration
         self.purchase_link = purchase_link
 
-    def display(self):
-        print(f"Companhia: {self.airline}")
-        print(f"Origem: {self.origin}")
-        print(f"Destino: {self.destination}")
-        print(f"Saída: {self.departure_time}")
-        print(f"Chegada: {self.arrival_time}")
-        print(f"Duração: {self.duration}")
-        print(f"Bagagem: {self.baggage}")
-        print(f"Escalas: {self.stops}")
-        print(f"Preço: R$ {self.price}")
+    def __str__(self):
+        return (
+            f"Companhia: {self.airline}\n"
+            f"Origem: {self.origin}\n"
+            f"Destino: {self.destination}\n"
+            f"Saída: {self.departure_time}\n"
+            f"Chegada: {self.arrival_time}\n"
+            f"Duração: {self.duration}\n"
+            f"Bagagem: {self.baggage}\n"
+            f"Escalas: {self.stops}\n"
+            f"Preço: R$ {self.price}"
+        )

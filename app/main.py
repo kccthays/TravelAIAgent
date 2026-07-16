@@ -16,21 +16,15 @@ def main():
     
     flights.sort(key=lambda flight: flight.price)
 
-    print("\n===== VOOS ENCONTRADOS =====")
-
-    for flight in flights:
-        print(f"\nCompanhia: {flight.airline}")
-        print(f"Preço: R$ {flight.price}")
-
     if len(flights) == 0:
         print("❌ Nenhum voo encontrado.")
         return
 
-    print("\n==== VOOS ENCONTRADOS ====")
+        print("\n==== VOOS ENCONTRADOS ====")
 
     for index, flight in enumerate(flights, start=1):
-    print(f"\nVoo {index}")
-    flight.display()
+        print(f"\nVoo {index}")
+        print(flight)
 
     cheapest_flight = find_cheapest_flight(flights)
 
