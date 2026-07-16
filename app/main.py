@@ -13,6 +13,8 @@ def main():
         destination,
         departure_date
     )
+    
+    flights.sort(key=lambda flight: flight.price)
 
     print("\n===== VOOS ENCONTRADOS =====")
 
@@ -24,12 +26,18 @@ def main():
         print("❌ Nenhum voo encontrado.")
         return
 
+    print("\n==== VOOS ENCONTRADOS ====")
+
+    for index, flight in enumerate(flights, start=1):
+    print(f"\nVoo {index}")
+    flight.display()
+
     cheapest_flight = find_cheapest_flight(flights)
 
-    print("===== MELHOR VOO =====")
+    print("\n===== MELHOR OPÇÃO =====")
     print(f"Companhia: {cheapest_flight.airline}")
     print(f"Preço: R$ {cheapest_flight.price}")
-    print(f"Quantidade de voos encontrados: {len(flights)}")
+    print(f"Link: {cheapest_flight.purchase_link}")
 
 
 if __name__ == "__main__":

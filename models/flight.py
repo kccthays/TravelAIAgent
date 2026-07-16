@@ -24,3 +24,14 @@ class Flight:
         self.stops = stops
         self.duration = duration
         self.purchase_link = purchase_link
+
+    def display(self):
+        print(f"Companhia: {self.airline}")
+        print(f"Origem: {self.origin}")
+        print(f"Destino: {self.destination}")
+        print(f"Saída: {self.departure_time}")
+        print(f"Chegada: {self.arrival_time}")
+        print(f"Duração: {self.duration}")
+        print(f"Bagagem: {self.baggage}")
+        print(f"Escalas: {self.stops}")
+        print(f"Preço: R$ {self.price}")

@@ -26,5 +26,31 @@ FLIGHTS = [
         stops=1,
         duration="1h50",
         purchase_link="https://gol.com.br"
+    ),
+    Flight(
+    origin="Campo Grande",
+    destination="São Paulo",
+    departure_date="09/10/2026",
+    departure_time="06:00",
+    arrival_time="07:40",
+    airline="AZUL",
+    price=950.00,
+    baggage="1 bagagem",
+    stops=0,
+    duration="1h40",
+    purchase_link="https://voeazul.com.br"
+    ),
+    Flight(
+    origin="Campo Grande",
+    destination="São Paulo",
+    departure_date="09/10/2026",
+    departure_time="20:30",
+    arrival_time="22:20",
+    airline="LATAM",
+    price=1450.00,
+    baggage="2 bagagens",
+    stops=0,
+    duration="1h50",
+    purchase_link="https://latam.com"
     )
 ]
